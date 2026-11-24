@@ -43,3 +43,18 @@ ul { padding-left: 1.2em; }
   border-radius: 999px; font-weight: 600;
 }
 .button:hover { text-decoration: none; opacity: 0.9; }
+details {
+  background: var(--card); border-radius: 14px; margin: 10px 0; padding: 0 20px;
+}
+summary {
+  cursor: pointer; font-weight: 600; padding: 16px 0; list-style: none; position: relative; padding-right: 28px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  color: var(--muted); font-size: 22px; font-weight: 400;
+}
+details[open] summary::after { content: "−"; }
+details > p:last-child { padding-bottom: 16px; margin-bottom: 0; }
+details > p:first-of-type { margin-top: 0; }
+code { font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--bg); padding: 2px 6px; border-radius: 6px; }

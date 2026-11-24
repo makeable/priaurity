@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PriAurity FAQ</title>
+  <meta name="description" content="Answers to common questions about PriAurity, the Mac menu bar app that keeps your preferred audio devices selected.">
+  <link rel="icon" href="../icon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+  <header class="app">
+    <img src="../icon.png" alt="">
+    <div>
+      <h1>FAQ</h1>
+      <p>PriAurity</p>
+    </div>
+  </header>
+
+  <h2>Getting started</h2>
+
+  <details>
+    <summary>How do I set my preferred devices?</summary>
+    <p>Click the speaker icon in the menu bar. PriAurity has separate lists for Output and Input.
+      Drag a device by its ≡ handle to put it in the order you prefer. PriAurity uses the
+      highest-ranked device that's connected, and switches again whenever devices connect or
+      disconnect.</p>
+  </details>
+
+  <details>
+    <summary>Where is PriAurity? It has no window or Dock icon.</summary>
+    <p>PriAurity lives in the menu bar, as a speaker with a star on it. Click it to open your device
+      lists and settings.</p>
+  </details>
+
+  <details>
+    <summary>How do I start PriAurity when I log in?</summary>
+    <p>Turn on "Launch at login" at the bottom of the PriAurity menu.</p>
+  </details>
+
+  <h2>Switching devices</h2>
+
+  <details>
+    <summary>I picked a device in System Settings and it moved to the top of my list. Why?</summary>
+    <p>When you choose a device yourself, in System Settings, Control Center or with "Use Now",
+      PriAurity treats that as your new preference and moves it above the other connected devices,
+      so your choice sticks. Devices ranked higher that aren't connected keep their places.</p>
+  </details>
+
+  <details>
+    <summary>Why did PriAurity switch away from the device I was using?</summary>
+    <p>A device ranked higher in your list connected, such as a dock or headphones. PriAurity always
+      uses the highest-ranked connected device. Drag the device you want higher in the list, or pick
+      it in Control Center, which moves it up for you.</p>
+  </details>
+
+  <details>
+    <summary>My headphones connected and macOS switched to them. Will PriAurity switch back?</summary>
+    <p>Yes, if they're ranked lower than the device you were using. If you want them to take over
+      when they connect, drag them higher in the list.</p>
+  </details>
+
+  <details>
+    <summary>How do I stop automatic switching for a while?</summary>
+    <p>Use the switch at the top of the PriAurity menu. While switching is paused, the menu bar icon
+      loses its sound waves. Turn it back on and PriAurity applies your list again.</p>
+  </details>
+
+  <details>
+    <summary>Do alert sounds follow my output device?</summary>
+    <p>With "Alert sounds follow output" turned on, macOS's alert and notification sounds play on
+      the same device as everything else. Turn it off to leave alert sounds wherever you set them in
+      System Settings.</p>
+  </details>
+
+  <h2>Your device list</h2>
+
+  <details>
+    <summary>A device I've unplugged is still in the list</summary>
+    <p>Unplugged devices stay in the list, greyed out, so they keep their place for next time. To
+      remove one, right-click it and choose Forget Device.</p>
+  </details>
+
+  <details>
+    <summary>My dock appears in the list twice</summary>
+    <p>Some docks report a different identity when plugged into a different port. PriAurity
+      recognises most of these automatically and keeps a single entry. If you still see a
+      duplicate, right-click the greyed-out copy and choose Forget Device.</p>
+  </details>
+
+  <details>
+    <summary>I have two identical monitors. How do I tell them apart?</summary>
+    <p>Devices with the same name get a number, such as "Monitor (2)". The number stays with the
+      device, so it moves with it when you reorder the list.</p>
+  </details>
+
+  <h2>Volume and mute</h2>
+
+  <details>
+    <summary>How do I change a device's volume or mute it?</summary>
+    <p>Each connected device with a volume control has a slider under its name and a mute button on
+      the right. You can adjust any device, not just the one that's playing. For microphones, the
+      slider sets the input level. Moving a slider also unmutes the device, like the volume keys.</p>
+  </details>
+
+  <details>
+    <summary>Some devices don't have a volume slider</summary>
+    <p>Many monitors and TVs connected over HDMI or DisplayPort don't let macOS change their volume,
+      so PriAurity shows "No volume control". Use the monitor's own buttons instead.</p>
+  </details>
+
+  <details>
+    <summary>My dock shows as muted but still plays sound</summary>
+    <p>Some USB docks and audio adapters ignore a mute that's set while they're idle. macOS records
+      the device as muted, but the hardware never receives the command, so once audio starts it
+      plays anyway. PriAurity works around this by sending the mute again as soon as the device
+      starts playing, so you may hear a split second of sound before it goes quiet.</p>
+    <p>If a device still plays while showing as muted, click its mute button twice to unmute and
+      mute it again while it's playing.</p>
+  </details>
+
+  <details>
+    <summary>The volume changed when I reconnected a device</summary>
+    <p>With "Restore each device's volume" turned on, PriAurity puts back the last volume and mute
+      you set for each device when it reconnects. Set it once and that level is remembered. Turn the
+      option off if you'd rather macOS handled it.</p>
+  </details>
+
+  <h2>Privacy</h2>
+
+  <details>
+    <summary>Does PriAurity listen to my microphone?</summary>
+    <p>No. PriAurity chooses which microphone macOS uses and can set its input level, but it never
+      opens a microphone or records, listens to or processes any audio.</p>
+  </details>
+
+  <details>
+    <summary>Does PriAurity collect any data?</summary>
+    <p>No. It doesn't connect to the internet and contains no analytics or tracking. Your device
+      lists and settings stay on your Mac. Read the <a href="../privacy/">privacy policy</a>.</p>
+  </details>
+
+  <h2>Troubleshooting</h2>
+
+  <details>
+    <summary>PriAurity isn't switching devices</summary>
+    <p>Check that the switch at the top of the menu is on, and that the device you expect shows as
+      connected rather than "Not connected". If it still doesn't switch, quit PriAurity from its
+      menu and open it again.</p>
+  </details>
+
+  <details>
+    <summary>How do I start over with a fresh device list?</summary>
+    <p>Quit PriAurity, then move this folder to the Bin:
+      <code>~/Library/Containers/com.supermatt.priaurity</code>. The next time you open PriAurity it
+      starts with your current devices in their current order.</p>
+  </details>
+
+  <details>
+    <summary>Something else isn't working</summary>
+    <p><a href="https://github.com/makeable/priaurity/issues/new">Report a problem</a> and include
+      your macOS version and the audio devices involved.</p>
+  </details>
+
+  <nav>
+    <a href="../">PriAurity</a>
+    <a href="../support/">Support</a>
+    <a href="../privacy/">Privacy Policy</a>
+  </nav>
+</main>
+</body>
+</html>
