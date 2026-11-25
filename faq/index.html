@@ -120,7 +120,12 @@
   <details>
     <summary>Some devices don't have a volume slider</summary>
     <p>Many monitors and TVs connected over HDMI or DisplayPort don't let macOS change their volume,
-      so PriAurity shows "No volume control". Use the monitor's own buttons instead.</p>
+      so PriAurity shows "No volume control".</p>
+    <p>To get a slider anyway, right-click the device and choose Virtualise Volume. PriAurity then
+      sets the level itself, with its own slider and mute button. The volume keys and macOS's Sound
+      menu still can't control these devices. If you use an app that controls your monitor's volume
+      directly, such as BetterDisplay or MonitorControl, keep using that instead: with both, the two
+      volume settings stack.</p>
   </details>
 
   <details>
@@ -140,12 +145,15 @@
   <details>
     <summary>What does Virtualise Volume do?</summary>
     <p>It gives working volume control to an output that ignores its own, such as a dock's optical
-      port. PriAurity takes the sound your apps play to the device, lowers it to the volume you've
+      port, or has none, such as many monitors. PriAurity takes the sound your apps play to the device, lowers it to the volume you've
       set and plays it to the device. The device's slider, the volume keys and macOS's Sound menu
       all control it, and mute works too.</p>
     <p>Turn it on by right-clicking the device and choosing Virtualise Volume. Devices with it on
-      show a "Virtual" tag. It needs macOS 14.2 or later, and is offered for outputs that have a
-      volume control. It only runs while that device is your output.</p>
+      show a "Virtual" tag. It needs macOS 14.2 or later, and only runs while that device is your
+      output.</p>
+    <p>It also works on outputs with no volume control at all, such as many monitors. On those,
+      PriAurity keeps the level itself: use PriAurity's slider, because the volume keys and the Sound
+      menu can't control them.</p>
     <p>The first time, macOS asks you to allow PriAurity to record system audio, which it needs for
       this. If the permission is missing, you'll hear a few seconds of silence, then the device goes
       back to full volume and PriAurity shows how to fix it. Turn it on in System Settings ›
