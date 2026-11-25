@@ -58,3 +58,8 @@ details[open] summary::after { content: "−"; }
 details > p:last-child { padding-bottom: 16px; margin-bottom: 0; }
 details > p:first-of-type { margin-top: 0; }
 code { font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--bg); padding: 2px 6px; border-radius: 6px; }
+figure.shot { margin: 24px 0; }
+figure.shot img {
+  display: block; width: 100%; height: auto; border-radius: 12px;
+  border: 1px solid var(--rule); box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
