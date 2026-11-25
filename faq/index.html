@@ -130,9 +130,29 @@
       jack. The optical port always sends full volume, because it expects your amplifier or
       receiver to set the level.</p>
     <p>The dock doesn't tell macOS which port is in use, so macOS treats the volume as working. The
-      volume keys and macOS's own Sound menu have the same problem, and PriAurity's slider does too.
-      Use your amplifier's or receiver's volume control instead. Mute still works on most of these
-      devices.</p>
+      volume keys and macOS's own Sound menu have the same problem, and so does PriAurity's slider
+      on its own.</p>
+    <p>PriAurity can fix this. Right-click the device and choose Virtualise Volume, and its slider,
+      the volume keys and the Sound menu all change the volume again. See "What does Virtualise
+      Volume do?" below. Otherwise, use your amplifier's or receiver's volume control.</p>
+  </details>
+
+  <details>
+    <summary>What does Virtualise Volume do?</summary>
+    <p>It gives working volume control to an output that ignores its own, such as a dock's optical
+      port. PriAurity takes the sound your apps play to the device, lowers it to the volume you've
+      set and plays it to the device. The device's slider, the volume keys and macOS's Sound menu
+      all control it, and mute works too.</p>
+    <p>Turn it on by right-clicking the device and choosing Virtualise Volume. Devices with it on
+      show a "Virtual" tag. It needs macOS 14.2 or later, and is offered for outputs that have a
+      volume control. It only runs while that device is your output.</p>
+    <p>The first time, macOS asks you to allow PriAurity to record system audio, which it needs for
+      this. If the permission is missing, you'll hear a few seconds of silence, then the device goes
+      back to full volume and PriAurity shows how to fix it. Turn it on in System Settings ›
+      Privacy &amp; Security › Screen &amp; System Audio Recording, then choose Try Again.</p>
+    <p>Only turn it on for outputs whose own volume doesn't work. On a device whose volume already
+      works, such as a dock's headphone jack, both would lower the level and the volume would drop
+      off too quickly.</p>
   </details>
 
   <details>
@@ -157,7 +177,15 @@
   <details>
     <summary>Does PriAurity listen to my microphone?</summary>
     <p>No. PriAurity chooses which microphone macOS uses and can set its input level, but it never
-      opens a microphone or records, listens to or processes any audio.</p>
+      opens a microphone or records or listens to what it picks up.</p>
+  </details>
+
+  <details>
+    <summary>Why does PriAurity ask to record system audio?</summary>
+    <p>Only if you turn on Virtualise Volume for a device. To set that device's volume, PriAurity
+      has to take the sound your apps play to it, lower it and play it on. macOS calls this
+      recording system audio. The sound only passes through PriAurity's memory as it plays. It's
+      never recorded, saved or sent anywhere.</p>
   </details>
 
   <details>
