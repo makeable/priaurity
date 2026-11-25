@@ -110,6 +110,52 @@
       device, so it moves with it when you reorder the list.</p>
   </details>
 
+  <h2>Device settings</h2>
+
+  <details>
+    <summary>Where are a device's settings?</summary>
+    <p>Click the sliders button on the right of an output, or right-click it and choose Device
+      Settings…. There you'll find the device's type, Virtualise Volume, its EQ and, for headphones,
+      crossfeed and virtual speakers.</p>
+  </details>
+
+  <details>
+    <summary>How does PriAurity know a device is headphones?</summary>
+    <p>It goes by what the device tells macOS: the Mac's own headphone jack, USB headsets and
+      headphones, and Bluetooth devices with a microphone, along with names such as AirPods or
+      "headphones". It can't always tell, for example with headphones plugged into a dock or an
+      audio interface. Set Type to Headphones or Speakers in the device's settings to correct it.
+      Crossfeed and virtual speakers only appear for headphones.</p>
+  </details>
+
+  <h2>Headphones</h2>
+
+  <details>
+    <summary>What is crossfeed?</summary>
+    <p>With speakers, each ear hears both speakers. With headphones, each ear only hears its own
+      side, so music mixed for speakers can sound as if it's inside your head, and instruments
+      panned hard to one side can be tiring. Crossfeed sends a little of each side to the other
+      ear, softened and slightly delayed, the way speakers would. Turn it up in the device's
+      settings until it feels natural. It doesn't change the overall loudness.</p>
+  </details>
+
+  <details>
+    <summary>What are virtual speakers?</summary>
+    <p>Virtual speakers make headphones sound like a pair of real speakers in a room in front of you.
+      They use recordings made with tiny microphones in people's ears while real loudspeakers
+      played in a listening room, so the sound carries the shape of an ear and the room's natural
+      echo. It goes further than crossfeed, which it replaces while it's on.</p>
+    <p>Width sets where the speakers stand: Narrow (about 18° either side, like desk speakers) or
+      Wide (45°). Everyone's ears are different, so there are recordings from 20 listeners, two
+      dummy heads and 18 people. Use the arrows beside Listener to try a few: the one that sounds
+      most like speakers in front of you, rather than just wider, suits your ears best.</p>
+    <p>Virtual speakers work at 44.1 and 48 kHz, the rates almost all headphones use. If your
+      device is set to another rate, change it in Audio MIDI Setup.</p>
+    <p>The recordings come from the SADIE II database by the University of York, used under the
+      <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. See
+      <a href="#credits">Credits</a>.</p>
+  </details>
+
   <h2>Volume and mute</h2>
 
   <details>
@@ -125,7 +171,7 @@
     <summary>Some devices don't have a volume slider</summary>
     <p>Many monitors and TVs connected over HDMI or DisplayPort don't let macOS change their volume,
       so PriAurity shows "No volume control".</p>
-    <p>To get a slider anyway, right-click the device and choose Virtualise Volume. PriAurity then
+    <p>To get a slider anyway, open the device's settings and turn on Virtualise Volume. PriAurity then
       sets the level itself, with its own slider and mute button. The volume keys and macOS's Sound
       menu still can't control these devices. If you use an app that controls your monitor's volume
       directly, such as BetterDisplay or MonitorControl, keep using that instead: with both, the two
@@ -141,7 +187,7 @@
     <p>The dock doesn't tell macOS which port is in use, so macOS treats the volume as working. The
       volume keys and macOS's own Sound menu have the same problem, and so does PriAurity's slider
       on its own.</p>
-    <p>PriAurity can fix this. Right-click the device and choose Virtualise Volume, and its slider,
+    <p>PriAurity can fix this. Open the device's settings and turn on Virtualise Volume, and its slider,
       the volume keys and the Sound menu all change the volume again. See "What does Virtualise
       Volume do?" below. Otherwise, use your amplifier's or receiver's volume control.</p>
   </details>
@@ -152,7 +198,7 @@
       port, or has none, such as many monitors. PriAurity takes the sound your apps play to the device, lowers it to the volume you've
       set and plays it to the device. The device's slider, the volume keys and macOS's Sound menu
       all control it, and mute works too.</p>
-    <p>Turn it on by right-clicking the device and choosing Virtualise Volume. Devices with it on
+    <p>Turn it on in the device's settings, under Volume. Devices with it on
       show a "Virtual" tag. It needs macOS 14.2 or later, and only runs while that device is your
       output.</p>
     <p>It also works on outputs with no volume control at all, such as many monitors. On those,
@@ -196,12 +242,11 @@
 
   <details>
     <summary>How do I use an equaliser on a device?</summary>
-    <p>Right-click an output and choose Equaliser…. Pick a preset (Flat, Bass boost, Voice or
+    <p>Open the device's settings, turn on EQ and choose Edit. Pick a preset (Flat, Bass boost, Voice or
       Treble boost) or move the ten sliders, from 32 Hz on the left to 16 kHz on the right. Use the
       preamp to turn the overall level down if boosted sounds start to distort.</p>
     <p>Each device keeps its own EQ, so your desk speakers and headphones can each sound their
-      best. Devices with their EQ on show an "EQ" tag; click the sliders button on the device to
-      open it again.</p>
+      best. Devices with their EQ on show an "EQ" tag.</p>
   </details>
 
   <details>
@@ -267,7 +312,7 @@
 
   <details>
     <summary>Why does PriAurity ask to record system audio?</summary>
-    <p>Only if you turn on Virtualise Volume, an equaliser or a sound theme. To change how your
+    <p>Only if you turn on Virtualise Volume, an equaliser, a sound theme, crossfeed or virtual speakers. To change how your
       audio sounds, PriAurity has to take the sound your apps play, adjust it and play it on. macOS calls this
       recording system audio. The sound only passes through PriAurity's memory as it plays. It's
       never recorded, saved or sent anywhere.</p>
@@ -300,6 +345,15 @@
     <p><a href="https://github.com/makeable/priaurity/issues/new">Report a problem</a> and include
       your macOS version and the audio devices involved.</p>
   </details>
+
+  <h2 id="credits">Credits</h2>
+  <p>Virtual speakers use binaural room impulse responses from the
+    <a href="https://zenodo.org/records/12092466">SADIE II database</a>, Copyright 2018, University
+    of York, licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License
+    2.0</a>. PriAurity includes a subset of them (two speaker layouts at 44.1 and 48 kHz, shortened
+    and matched in loudness). C. Armstrong, L. Thresh, D. Murphy and G. Kearney, "A Perceptual
+    Evaluation of Individual and Non-Individual HRTFs: A Case Study of the SADIE II Database",
+    <i>Applied Sciences</i> 8(11), 2029, 2018.</p>
 
   <nav>
     <a href="../">PriAurity</a>
