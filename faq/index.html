@@ -192,6 +192,42 @@
       option off if you'd rather macOS handled it.</p>
   </details>
 
+  <h2>Equaliser and sound themes</h2>
+
+  <details>
+    <summary>How do I use an equaliser on a device?</summary>
+    <p>Right-click an output and choose Equaliser…. Pick a preset (Flat, Bass boost, Voice or
+      Treble boost) or move the ten sliders, from 32 Hz on the left to 16 kHz on the right. Use the
+      preamp to turn the overall level down if boosted sounds start to distort.</p>
+    <p>Each device keeps its own EQ, so your desk speakers and headphones can each sound their
+      best. Devices with their EQ on show an "EQ" tag; click the sliders button on the device to
+      open it again.</p>
+  </details>
+
+  <details>
+    <summary>What are sound themes?</summary>
+    <p>A sound theme shapes everything you hear, on whichever device is playing, on top of that
+      device's own EQ. Choose one from the Sound row under the volume slider: Night (softer bass and
+      quieter loud moments), Music, Movie (clearer dialogue) or Voice (podcasts and calls), or Off.</p>
+    <p>The idea is that a device's EQ corrects how that speaker sounds, while the theme suits what
+      you're doing, and it follows you when you switch devices.</p>
+  </details>
+
+  <details>
+    <summary>Can I make my own sound themes?</summary>
+    <p>Yes, as many as you like. In the Sound panel, choose New theme, give it a name and set the
+      sliders. You hear the changes as you make them. "Even out loud moments" gently turns down
+      sudden loud bits, like explosions or adverts.</p>
+    <p>Right-click a theme to edit, duplicate, rename or delete it. You can't change the built-in
+      themes, but you can duplicate one, such as Night, and make it your own.</p>
+  </details>
+
+  <details>
+    <summary>Do EQ and sound themes work on AirPlay speakers?</summary>
+    <p>No. macOS doesn't let apps process audio going to AirPlay speakers, so they play without
+      PriAurity's EQ or theme. Wired, USB, Bluetooth and HDMI devices all work.</p>
+  </details>
+
   <h2>Battery</h2>
 
   <details>
@@ -200,13 +236,14 @@
       connected, disconnected or changed, and only does any work at that moment. Your audio plays
       exactly as it would without PriAurity, so it uses no more battery than your Mac does on its
       own.</p>
-    <p>Virtualise Volume is different. While a device with it turned on is your output, macOS
-      passes your Mac's audio through PriAurity continuously, even when nothing is playing. That
-      costs roughly 1% of a full charge, about 5 to 15 minutes over a whole day on battery. It
-      stops as soon as you switch to a device without Virtualise Volume. It doesn't use any
+    <p>Virtualise Volume, an equaliser and sound themes are different. While any of them applies to
+      your output, macOS passes your Mac's audio through PriAurity continuously, even when nothing
+      is playing. That costs roughly 1% of a full charge, about 5 to 15 minutes over a whole day on
+      battery. It stops as soon as none of them applies, for example when you switch to a device
+      without them and the sound theme is Off. It doesn't use any
       battery while your Mac is plugged in, which is usually the case when you're using a dock or desk
       speakers.</p>
-    <p>Virtualise Volume could pause while nothing is playing to save most of that. The catch is
+    <p>PriAurity could pause while nothing is playing to save most of that. The catch is
       that the first moment of each sound after a pause, around 40 milliseconds, would be lost,
       which can clip notification sounds and spoken feedback. Most virtualised devices are used
       while plugged in, so it isn't worth that today. If it matters to you,
@@ -224,8 +261,8 @@
 
   <details>
     <summary>Why does PriAurity ask to record system audio?</summary>
-    <p>Only if you turn on Virtualise Volume for a device. To set that device's volume, PriAurity
-      has to take the sound your apps play to it, lower it and play it on. macOS calls this
+    <p>Only if you turn on Virtualise Volume, an equaliser or a sound theme. To change how your
+      audio sounds, PriAurity has to take the sound your apps play, adjust it and play it on. macOS calls this
       recording system audio. The sound only passes through PriAurity's memory as it plays. It's
       never recorded, saved or sent anywhere.</p>
   </details>
