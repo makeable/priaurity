@@ -124,6 +124,18 @@
   </details>
 
   <details>
+    <summary>The volume slider doesn't change my dock's optical (S/PDIF) output</summary>
+    <p>Many docks and USB audio adapters have a single audio output that feeds both a headphone or
+      line-out jack and an optical (S/PDIF) port. Their volume control only works on the headphone
+      jack. The optical port always sends full volume, because it expects your amplifier or
+      receiver to set the level.</p>
+    <p>The dock doesn't tell macOS which port is in use, so macOS treats the volume as working. The
+      volume keys and macOS's own Sound menu have the same problem, and PriAurity's slider does too.
+      Use your amplifier's or receiver's volume control instead. Mute still works on most of these
+      devices.</p>
+  </details>
+
+  <details>
     <summary>My dock shows as muted but still plays sound</summary>
     <p>Some USB docks and audio adapters ignore a mute that's set while they're idle. macOS records
       the device as muted, but the hardware never receives the command, so once audio starts it
